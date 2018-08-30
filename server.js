@@ -39,9 +39,10 @@ if (isDeveloping) {
   });
 }
 
-app.listen(port, '0.0.0.0', function onStart(err) {
+const url = '127.0.0.1';
+app.listen(port, url, function onStart(err) {
   if (err) {
     console.log(err);
   }
-  console.info('==> 🌎 Listening on port %s. Open up http://0.0.0.0:%s/ in your browser.', port, port);
+  console.info(`==> 🌎 Listening on port ${port}. Open up ${url}:${port}/ in your browser.`);
 });
